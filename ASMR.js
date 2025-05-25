@@ -22,17 +22,17 @@ export const ingredients = [
 ];
 
 export const recipeSteps = [
-  "1. 무를 1.5cm 두께로 반달썰기한다. (소요시간 1분)",
-  "2. 대파와 고추를 어슷썰기한다. (소요시간 2분)",
-  "3. 간장, 고춧가루, 설탕 및 양념장 재료들을 섞어 양념장을 만든다. (소요시간 4분)",
-  "4. 고등어를 깨끗이 헹군다. (소요시간 6분)",
-  "5. 헹군 고등어를 반으로 자른다. (소요시간 2분)",
-  "6. 냄비에 무를 깐 후 반 자른 고등어를 얹는다. (소요시간 5분)",
-  "7. 대파와 고추를 냄비에 얹은 고등어에 올린다. (소요시간 1분)",
-  "8. 양념장을 냄비에 붓고 뚜껑을 열고 끓인다. (소요시간 10분)",
-  "9. 거품이 지어 끓어오르면 불을 줄이고 뚜껑을 닫는다. (소요시간 3분)",
-  "10. 재료가 골고루 익을 때까지 기다리면서 끓인다. (소요시간 9분)",
-  "11. 재료가 골고루 익으면 꺼내서 맛있게 먹는다."
+  "1. 무를 1.5cm 두께로 반달썰기합니다. (소요시간 1분)",
+  "2. 대파와 고추를 어슷썰기합니다. (소요시간 2분)",
+  "3. 간장, 고춧가루, 설탕 및 양념장 재료들을 섞어 양념장을 만듭니다. (소요시간 4분)",
+  "4. 고등어를 깨끗이 헹굽니다. (소요시간 6분)",
+  "5. 헹군 고등어를 반으로 자릅니다. (소요시간 2분)",
+  "6. 냄비에 무를 깐 후 반 자른 고등어를 얹습니다. (소요시간 5분)",
+  "7. 대파와 고추를 냄비에 얹은 고등어에 올립니다. (소요시간 1분)",
+  "8. 양념장을 냄비에 붓고 뚜껑을 열고 끓입니다. (소요시간 10분)",
+  "9. 거품이 지어 끓어오르면 불을 줄이고 뚜껑을 닫습니다. (소요시간 3분)",
+  "10. 재료가 골고루 익을 때까지 기다리면서 끓입니다. (소요시간 9분)",
+  "11. 재료가 골고루 익으면 꺼내서 맛있게 먹습니다."
 ];
 
 export function printSeasonings() {
@@ -66,7 +66,7 @@ export function printAll() {
   recipeSteps.forEach(step => console.log(step));
 }
 
-// 배고파졌음 간고등어 먹으러감 ㅅㄱ
+// 배고파졌습니다 간고등어조림 먹으러갈게요 ㅂㅂ
 
 export function getTotalCookTime() {
   let totalMinutes = 0;
@@ -95,3 +95,30 @@ export function getStepTime(stepNumber) {
     return `${stepNumber}단계에는 소요시간 정보가 없습니다.`;
   }
 }
+
+// 간고등어를 먹으려고 했거든요??? 집에 재료가 없음..
+
+export function getLongestStep() {
+  let maxTime = 0;
+  let maxIndex = -1;
+
+  recipeSteps.forEach((step, index) => {
+    const match = step.match(/\(소요시간\s*(\d+)분\)/);
+    if (match) {
+      const time = parseInt(match[1], 10);
+      if (time > maxTime) {
+        maxTime = time;
+        maxIndex = index;
+      }
+    }
+  });
+
+  if (maxIndex !== -1) {
+    return `가장 오래 걸리는 단계는 ${maxIndex + 1}단계: "${recipeSteps[maxIndex]}" (총 ${maxTime}분)`;
+  } else {
+    return "소요시간 정보가 없습니다.";
+  }
+}
+
+// 마트가야할거같네요
+// 귀찮은데
