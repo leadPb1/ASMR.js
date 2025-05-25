@@ -1,10 +1,10 @@
-# Andong Salted Mackerel Recipe JS Library, ASMR.js
+# 안동 간고등어 레시피 라이브러리, ASMR.js
 
-## Introduce
+## 소개
 
 **`ASMR.js`**는 **안동시**의 요리인 **안동 간고등어**의 **레시피 및 재료**를 준비하는 데 도움이 되는 **JS 라이브러리**입니다.
 
-## Use
+## 사용
 
 ### 1. HTML Script
 
