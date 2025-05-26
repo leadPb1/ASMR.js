@@ -1,24 +1,27 @@
-# 안동 간고등어 레시피 라이브러리, ASMR.js
+# 안동 간고등어 레시피 JS 라이브러리 — ASMR.js
 
-## 소개
+## 설명
 
-`ASMR.js`는 **안동시**의 요리인 **안동 간고등어**의 **레시피 및 재료**를 준비하는 데 도움이 되는 **JS 라이브러리**입니다.
+**`ASMR.js`**는 **안동 간고등어**의 **재료**와 **단계별 레시피**를 구성하는 데 도움이 되도록 설계된 가벼운 **자바스크립트 라이브러리**입니다. 안동 간고등어는 **대한민국 안동시**의 전통 요리입니다.
 
-## 사용
+## 사용법
 
-### 1. HTML 스크립트
+### 1. 스크립트 태그 사용하기
 
-프로젝트에 ASMR.js 라이브러리를 추가 후, HTML에 다음 코드를 추가하세요.
+스크립트 태그를 통해 가져옵니다.
+
 ```html
 <script src="ASMR.js"></script>
 <script>
-  // ASMR.js Codes
+  printAll();
+  console.log(getTotalCookTime());
 </script>
 ```
 
-### 2. HTML 모듈
+### 2. 모듈 사용하기
 
-프로젝트에 ASMR.js 라이브러리를 추가 후, HTML에 다음 코드를 추가하세요.
+라이브러리를 모듈로 가져옵니다.
+
 ```html
 <script type="module">
   import {
@@ -26,42 +29,56 @@
     getTotalCookTime
   } from './ASMR.js';
 
-  // ASMR.js 코드들
+  printAll();
+  console.log(getTotalCookTime());
 </script>
 ```
 
-## 코드
+## 기능
 
-ASMR.js 라이브러리에는 다음 기능과 같은 코드가 포함되어 있습니다.
+ASMR.js는 다음과 같은 기능을 제공합니다.
 
-### `printIngredients()`
+### 출력 함수들
 
-주 요리에 필요한 재료들을 출력합니다.
+* `printSeasonings()`  
+전체 숙성장 재료를 출력합니다.
 
-### `printRecipe()`
+* `printIngredients()`
+전체 주 재료를 출력합니다.
+* `printRecipe()`
+전체 레시피를 출력합니다.
 
-각 단계에 대한 자세한 설명과 예상 시간이 포함된 전체 요리법 목록을 출력합니다.
+* `printAll()`
+위의 모든 내용을 한꺼번에 출력합니다.
 
-### `getStep(stepNumber)`
+### 가져오기 함수들
 
-특정 단계를 반환합니다.
+* `getStep(stepNumber)`  
+특정 레시피 단계의 내용을 반환합니다.
 
-### `getStepTime(stepNumber)`
+* `getStepTime(stepNumber)`  
+특정 레시피 단계에 대한 소요시간을 반환합니다.
 
-특정 조리 단계에 대한 예상 시간을 반환합니다.
+* `getStepTimes()`  
+각 단계에 대한 시간 정보를 반환합니다. 시간 정보는 합하지 않습니다.
 
-### `getTotalCookTime()`
+* `getTotalCookTime()`
+총 소요시간을 계산하여 반환합니다.
 
-총 예상 조리 시간을 계산하여 반환합니다.
+* `getLongestStep()`
+가장 소요시간이 오래 걸리는 레시피 단계를 반환합니다.
 
-### `getLongestStep()`
+### 검색 함수들
 
-레시피 중 가장 소요시간이 긴 단계를 찾아 반환합니다.
+* `searchStep(keyword)`  
+키워드가 포함된 레시피 단계를 반환합니다.
 
-### `printAll()`
+* `searchIngredients(keyword)`
+키워드가 포함된 주 재료를 반환합니다.
 
-양념, 재료, 요리 단계 모두를 한꺼번에 출력합니다.
+* `searchSeasoning(keyword)`
+키워드가 포함된 숙성장 재료를 반환합니다.
 
-### `getStepTimes()`
+## 라이선스
 
-모든 단계의 소요시간 정보를 반환합니다. 모든 소요시간 정보를 합하진 않습니다.
+[MIT 라이선스](../LICENSE).
