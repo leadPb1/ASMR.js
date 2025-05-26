@@ -34,6 +34,10 @@ After adding ASMR.js to your project, add the following to your HTML:
 
 The ASMR.js library contains code for the following functions:
 
+### `printSeasonings()`
+
+Prints out the ingredients to make the sauce needed for maturation.
+
 ### `printIngredients()`
 
 Prints the main ingredients required for the dish.
@@ -65,3 +69,19 @@ Prints everything the seasonings, ingredients, and recipe steps all at once.
 ### `getStepTimes()`
 
 Returns time information for all steps. Does not aggregate all time information.
+
+### `getStepTimes()`
+
+Prints the time for each step.
+
+### `searchStep(keyword)`
+
+Prints steps that contain a specific keyword.
+
+### `searchIngredients(keyword)`
+
+Prints ingredients that contain a specific keyword.
+
+### `searchSeasoning(keyword)`
+
+Prints seasonings that contain a specific keyword.
