@@ -138,6 +138,10 @@ export function searchIngredients(keyword) {
 }
 
 export function searchSeasoning(keyword) {
-  const result = seasoning.filter(step => step.includes(keyword));
+  const result = seasonings.filter(step => step.includes(keyword));
   return result.length ? result : "해당 키워드가 포함된 숙성장 재료가 없습니다.";
 }
+
+// 영어학원차에서 폰으로 수정중입니다
+// 노트북으로하면 와파가 연결이안되서
+// 고등어 만들 자료가 아직도집에없네요
