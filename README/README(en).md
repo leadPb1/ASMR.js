@@ -34,10 +34,6 @@ After adding ASMR.js to your project, add the following to your HTML:
 
 The ASMR.js library contains code for the following functions:
 
-### `printSeasonings()`
-
-Prints the list of sauce ingredients.
-
 ### `printIngredients()`
 
 Prints the main ingredients required for the dish.
@@ -65,3 +61,7 @@ Finds and returns the longest step in the recipe.
 ### `printAll()`
 
 Prints everything the seasonings, ingredients, and recipe steps all at once.
+
+### `getStepTimes()`
+
+Returns time information for all steps. Does not aggregate all time information.
