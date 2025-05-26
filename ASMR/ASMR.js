@@ -26,7 +26,7 @@ export const recipeSteps = [
 // 피아노학원에서 작업중인데 배고파짐;;
 // 아 도대체 누가 피아노학원에서 깃허브 노트북으로 키냐고ㅋㅋㅋㅋㅋ
 
-export function printIngredients() {
+export function printSeasonings() {
   console.log("숙성장 재료 리스트: ");
   seasonings.forEach(item => console.log("- " + item));
 }
