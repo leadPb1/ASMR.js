@@ -27,6 +27,11 @@ export const recipeSteps = [
 // 아 도대체 누가 피아노학원에서 깃허브 노트북으로 키냐고ㅋㅋㅋㅋㅋ
 
 export function printIngredients() {
+  console.log("숙성장 재료 리스트: ");
+  seasonings.forEach(item => console.log("- " + item));
+}
+
+export function printIngredients() {
   console.log("재료 리스트: ");
   ingredients.forEach(item => console.log("- " + item));
 }
@@ -44,6 +49,8 @@ export function getStep(stepNumber) {
 }
 
 export function printAll() {
+  console.log("숙성장 재료 리스트: ");
+  seasonings.forEach(item => console.log("- " + item));
   console.log("재료 리스트: ");
   ingredients.forEach(item => console.log("- " + item));
   console.log("조리 순서: ");
@@ -116,5 +123,21 @@ export function getStepTimes() {
   });
 }
 
-// 피아노학원이라서곧있으면영어학원도가야되서
+// 피아노학원이라서곧있으면영어학원도가야되서 좀 서둘러야될거같네요
 
+export function searchStep(keyword) {
+  const result = recipeSteps.filter(step => step.includes(keyword));
+  return result.length ? result : "해당 키워드가 포함된 단계가 없습니다.";
+}
+
+// 함수하나더추가 대충 찾는함수
+
+export function searchIngredients(keyword) {
+  const result = ingredients.filter(step => step.includes(keyword));
+  return result.length ? result : "해당 키워드가 포함된 재료가 없습니다.";
+}
+
+export function searchSeasoning(keyword) {
+  const result = seasoning.filter(step => step.includes(keyword));
+  return result.length ? result : "해당 키워드가 포함된 숙성장 재료가 없습니다.";
+}
