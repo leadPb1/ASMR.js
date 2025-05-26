@@ -30,58 +30,26 @@ After adding ASMR.js to your project, add the following to your HTML:
 </script>
 ```
 
-## Code
+## Features
 
 The ASMR.js library contains code for the following functions:
 
-### `printSeasonings()`
+### Print functions
 
-Prints out the ingredients to make the sauce needed for maturation.
+ * `printSeasonings()` Prints out the ingredients to make the sauce needed for maturation.
+ * `printIngredients()` Prints the main ingredients required for the dish.
+ * `printRecipe()` Prints the full list of recipe steps, each with detailed descriptions and estimated time.
+ * `printAll()` Prints everything the seasonings, ingredients, and recipe steps all at once.
 
-### `printIngredients()`
+### Get functions
 
-Prints the main ingredients required for the dish.
+ * `getStep(stepNumber)` Returns the content of a specific step.
+ * `getStepTime(stepNumber)` Returns the estimated time for a specific cooking step.
+ * `getTotalCookTime()` Calculates and returns the total estimated cooking time.
+ * `getLongestStep()` Finds and returns the longest step in the recipe.
+ * `getStepTimes()` Returns time information for all steps. Does not aggregate all time information.
 
-### `printRecipe()`
-
-Prints the full list of recipe steps, each with detailed descriptions and estimated time.
-
-### `getStep(stepNumber)`
-
-Returns the content of a specific step.
-
-### `getStepTime(stepNumber)`
-
-Returns the estimated time for a specific cooking step.
-
-### `getTotalCookTime()`
-
-Calculates and returns the total estimated cooking time.
-
-### `getLongestStep()`
-
-Finds and returns the longest step in the recipe.
-
-### `printAll()`
-
-Prints everything the seasonings, ingredients, and recipe steps all at once.
-
-### `getStepTimes()`
-
-Returns time information for all steps. Does not aggregate all time information.
-
-### `getStepTimes()`
-
-Prints the time for each step.
-
-### `searchStep(keyword)`
-
-Prints steps that contain a specific keyword.
-
-### `searchIngredients(keyword)`
-
-Prints ingredients that contain a specific keyword.
-
-### `searchSeasoning(keyword)`
-
-Prints seasonings that contain a specific keyword.
+### Search functions
+ * `searchStep(keyword)` Prints steps that contain a specific keyword.
+ * `searchIngredients(keyword)` Prints ingredients that contain a specific keyword.
+ * `searchSeasoning(keyword)` Prints seasonings that contain a specific keyword.
