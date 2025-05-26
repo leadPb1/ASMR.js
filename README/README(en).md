@@ -1,24 +1,27 @@
-# Andong Salted Mackerel Recipe JS Library, ASMR.js
+# Andong Salted Mackerel Recipe JS Library — ASMR.js
 
-## Introduce
+## Introduction
 
-**`ASMR.js`** is a **JavaScript library** that helps you prepare **recipes and ingredients** for **Andong Salted Mackerel**, a dish from **Andong City**.
+**`ASMR.js`** is a lightweight **JavaScript library** designed to help you organize the **ingredients** and **step-by-step recipe** for **Andong Salted Mackerel**, a traditional dish from **Andong City, Korea**.
 
-## Use
+## How to Use
 
-### 1. HTML Script
+### 1. Using a Script Tag
 
-After adding ASMR.js to your project, add the following to your HTML:
+Include the script directly in your HTML:
+
 ```html
 <script src="ASMR.js"></script>
 <script>
-  // ASMR.js Codes
+  printAll();
+  console.log(getTotalCookTime());
 </script>
 ```
 
-### 2. HTML Module
+### 2. Using as a Module
 
-After adding ASMR.js to your project, add the following to your HTML:
+Import the library as a module:
+
 ```html
 <script type="module">
   import {
@@ -26,30 +29,58 @@ After adding ASMR.js to your project, add the following to your HTML:
     getTotalCookTime
   } from './ASMR.js';
 
-  // ASMR.js codes
+  printAll();
+  console.log(getTotalCookTime());
 </script>
 ```
 
 ## Features
 
-The ASMR.js library contains code for the following functions:
+The ASMR.js library provides the following functions:
 
-### Print functions
+### Print Functions
 
- * `printSeasonings()` Prints out the ingredients to make the sauce needed for maturation.
- * `printIngredients()` Prints the main ingredients required for the dish.
- * `printRecipe()` Prints the full list of recipe steps, each with detailed descriptions and estimated time.
- * `printAll()` Prints everything the seasonings, ingredients, and recipe steps all at once.
+* `printSeasonings()`  
+Prints the ingredients used to make the maturation sauce.
 
-### Get functions
+* `printIngredients()`
+Prints the main ingredients required for the dish.
 
- * `getStep(stepNumber)` Returns the content of a specific step.
- * `getStepTime(stepNumber)` Returns the estimated time for a specific cooking step.
- * `getTotalCookTime()` Calculates and returns the total estimated cooking time.
- * `getLongestStep()` Finds and returns the longest step in the recipe.
- * `getStepTimes()` Returns time information for all steps. Does not aggregate all time information.
+* `printRecipe()`
+Prints the full recipe steps, each with descriptions and estimated cooking time.
 
-### Search functions
- * `searchStep(keyword)` Prints steps that contain a specific keyword.
- * `searchIngredients(keyword)` Prints ingredients that contain a specific keyword.
- * `searchSeasoning(keyword)` Prints seasonings that contain a specific keyword.
+* `printAll()`
+Prints all of the above at once: seasonings, ingredients, and steps.
+
+### Get Functions
+
+* `getStep(stepNumber)`  
+Returns the content of a specific recipe step.
+
+* `getStepTime(stepNumber)`  
+Returns the estimated time for a specific cooking step.
+
+* `getStepTimes()`  
+Returns time information for each step (not aggregated).
+
+* `getTotalCookTime()`
+Calculates and returns the total cooking time across all steps.
+
+* `getLongestStep()`
+Returns the step that takes the longest time.
+
+### Search Functions
+
+* `searchStep(keyword)`  
+Returns recipe steps that contain the keyword.
+
+* `searchIngredients(keyword)`
+Returns ingredients that contain the keyword.
+
+* `searchSeasoning(keyword)`
+Returns seasonings that contain the keyword.
+
+## License
+
+[MIT License](../LICENSE).  
+Because delicious recipes should be open-source.
