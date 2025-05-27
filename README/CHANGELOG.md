@@ -1,3 +1,47 @@
+# Version
+
+## v1
+
+### v1.0
+
+Created ASMR.js
+
+### v1.1
+
+Add function, Remove time taken in step 11
+ 
+### v1.2
+
+Spelling corrections, polite language, additions
+
+### v1.3
+
+Add description
+
+### v1.4
+
+Correct spelling, change numbers
+
+### v1.5
+
+Renamed from ASMR.js to ASMR/ASMR.js
+
+### v1.6
+
+Added list ingredients, changed recipe from braised salted mackerel to mackerel
+
+### v1.7
+
+Add function
+
+### v1.7.1
+
+Edit function name
+
+### v1.7.2
+
+Edit function
+
 # 버전
 
 ## v1
